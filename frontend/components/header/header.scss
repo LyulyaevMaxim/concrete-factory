@@ -242,6 +242,7 @@
       font-size: 16px;
       margin-top: 31px;
       color: $gray-color;
+      z-index: 100;
 
       @media (min-width: $tablet) {
         margin-top: 28px;

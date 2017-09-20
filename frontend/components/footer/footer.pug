@@ -1,0 +1,33 @@
+mixin footer()
+  footer
+    +b.footer-info
+      +e.container
+        +e.NAV.links
+          ul
+            li: a(href="#") о компании
+            li: a(href="#") производство
+            li: a(href="#") помощь заказчику
+            li: a(href="#") контакты
+        +e.NAV.categories
+          ul
+            li: a(href="#") продажа бетона
+            li: a(href="#") доставка бетона
+            li: a(href="#") лаборатория
+            li: a(href="#") цены на бетон
+            li: a(href="#") виды на бетон
+            li: a(href="#") марки бетона
+            li: a(href="#") выбор бетона по марке
+        +b.footer-info-contacts
+          +e.address
+            p 123456, Нижний Новгород, ул.&nbsp;Баньшинская,&nbsp;д. 123, оф. 456
+          +e.phone
+            div
+              a(href="tel:89201234567") +7 (920) 000-00-00
+              a(href="tel:89201234567") +7 (920) 000-00-00
+          +e.mail
+            div
+              a(href="mailto:nbz_info@nbz.ru") nbz_info@nbz.ru
+
+
+    +b.footer-logo
+      +e.container

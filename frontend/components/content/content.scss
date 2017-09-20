@@ -509,6 +509,10 @@ block-for-articles {
   display: flex;
   flex-wrap: wrap;
 
+  &.mobile-hide {
+    display: none;
+  }
+
   @media (min-width: $tablet) {
     &.tablet-on {
       display: flex;
