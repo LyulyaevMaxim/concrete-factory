@@ -83,7 +83,7 @@ slider.owl-full-slider {
 
     @media (min-width: $desktop) {
       width: 585px;
-      right: 203px;
+      right: calc((100vw - 1170px) / 2 - 12px);
       top: 44%;
     }
   }
