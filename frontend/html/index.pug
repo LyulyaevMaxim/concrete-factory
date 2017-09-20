@@ -1,0 +1,42 @@
+include _assets/bemto/bemto
+- set_bemto_settings({ modifier: "--" , class_delimiter :  ' | ' })
+
+include ../components/head/head
+include ../components/header/header
+include ../components/sliders/full-slider/full-slider
+include ../components/forms/forms
+include ../components/content/content
+
+doctype html
+html(lang="ru")
+  head
+    +head({
+      "title": "Главная",
+      "description": "Главная страница",
+      "style_page": "styles/index.css"
+    })
+    style body { opacity: 0;}
+    
+
+
+
++header()
++b.BODY.main-page  
+  +full-slider()
+  .calculation-cost__container(style="background: url(img/sprite/fon-white.jpg);")
+    +form--calculation-cost
+  +block-with-img()
+  .buy-one-click__container(style="background: url(img/sprite/buy-1-click.jpg);")
+    +form--buy-one-click()
+  +content-with-img()
+  .block-for-features__container(style="background: url(img/sprite/fon-white.jpg);")
+    +block-for-features()
+  +block-for-advantages() 
+  .block-for-news__container(style="background: url(img/sprite/fon-white.jpg);")
+    +block-for-articles()
+  p 12
+
+
+link(rel="preload" href="styles/index.css" as="style" id="mainFileStyles")
+script.
+ document.getElementById('mainFileStyles').setAttribute('rel', 'stylesheet');

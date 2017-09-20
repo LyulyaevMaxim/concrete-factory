@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>Главная</title>
+		<meta charset="utf-8"/>
+		<meta content="Главная страница" name="description"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta name="HandheldFriendly" content="true"/>
+		<meta name="format-detection" content="telephone=no"/>
+		<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+		<link rel="preload" as="font" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" crossorigin="crossorigin"/>
+		<link href="img/favicons/favicon.ico" rel="shortcut icon"/>
+		<link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png"/>
+		<link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png"/>
+		<link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png"/>
+		<link rel="manifest" href="img/favicons/manifest.json"/>
+		<link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#5bbad5"/>
+		<meta name="theme-color" content="#ffffff"/>
+		<style>body { opacity: 0;}</style>
+	</head>
+</html>
+<header>
+	<div class="header__container"><a class="header__logo" href="#"></a>
+		<div class="header__content">
+			<div class="header-callback">
+				<div class="header-callback__tel"><a class="number" href="tel:89201234567">+7 920 <span>123 45 67</span></a>
+				</div>
+				<div class="header-callback__form"><a class="button" href="#callback">Заказать звонок</a>
+				</div>
+			</div>
+			<div class="header-search"><a class="header-search__help" href="#">помощь заказчику</a>
+				<form class="header-search__form" action="/search" method="get">
+					<input type="checkbox" id="showSearchForm"/>
+					<label for="showSearchForm"></label>
+					<input type="search" placeholder="Поиск" autocomplete="off"/><span id="fast-search-loader">Загрузка результатов...   </span>
+					<input type="submit"/>
+					<div class="ornamental-line">                 </div>
+				</form>
+			</div>
+			<div class="header-menu">
+				<input type="checkbox" id="showMainMenu"/>
+				<label for="showMainMenu"> ☰</label>
+				<nav>
+					<ul class="root_menu">
+						<li>               
+							<input type="checkbox" id="showSubMenu1"/>
+							<label for="showSubMenu1"></label><a href="#">наша компания</a>
+							<ul class="submenu">
+								<li><a href="#">Наше производство</a></li>
+								<li><a href="#">Наша лаборатория</a></li>
+								<li><a href="#">Наши объекты</a></li>
+							</ul>
+						</li>
+						<li><a href="#">прайт-лист</a></li>
+						<li><a href="#">продукция</a></li>
+						<li>               
+							<input type="checkbox" id="showSubMenu2"/>
+							<label for="showSubMenu2"></label><a href="#">виды оплаты</a>
+							<ul class="submenu">
+								<li><a href="#">PayPal</a></li>
+								<li><a href="#">WebMany</a></li>
+								<li><a href="#">Endex </a></li>
+							</ul>
+						</li>
+						<li><a href="#">контакты</a></li>
+						<li><a href="#">акции</a></li>
+						<li><a href="#">нерудные материалы</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+</header>
+<body class="main-page"> 
+	<link href="js/owl.carousel/owl.carousel.min.css" rel="stylesheet"/>
+	<link href="js/owl.carousel/owl.theme.default.min.css" rel="stylesheet"/>
+	<slider class="owl-carousel owl-theme owl-full-slider">
+		<div class="owl-item">
+			<div class="text">
+				<h2>Нагорный Бетонный&nbsp;Завод №1</h2>
+				<h3>Соответствие всем современным требованиям и стандартам</h3><a href="#">Подробнее</a>
+			</div>
+			<picture>
+				<source media="(min-width: 1170px)" srcset="img/content/main-slide-1.jpg"/>
+				<source media="(min-width: 768px)" srcset="img/content/main-slide-1--middle.jpg"/><img src="img/content/main-slide-1--mini.jpg" alt=""/>
+			</picture>
+		</div>
+		<div class="owl-item">
+			<div class="text">
+				<h2>Заголовок</h2>
+				<h3>Подзаголовок</h3><a href="#">Подробнее</a>
+			</div><img src="img/content/main-slide-1.jpg" alt=""/>
+		</div>
+	</slider>
+	<script src="js/jquery/jquery.min.js"></script>
+	<script src="js/owl.carousel/owl.carousel.min.js"></script>
+	<script>
+		var owl = $('.owl-full-slider');
+		owl.owlCarousel({
+		  margin: 0,
+		  nav: true,
+		  navText: true,
+		  loop: true,
+		  dots: false,
+		  responsive: {
+		    0: {
+		      items: 1
+		    }
+		  }
+		})
+	</script>
+	<div class="calculation-cost__container" style="background: url(img/sprite/fon-white.jpg);">
+		<div class="calculation-cost forms_container">
+			<div class="calculation-cost__title">
+				<p>рассчёт стоимости бетона с&nbsp;доставкой</p>
+			</div>
+			<div class="calculation-cost__body">
+				<div class="calculation-cost__field middle">       
+					<label>Тип бетона</label>
+					<input placeholder="Бетон М-100 В 7.5, П3"/>
+				</div>
+				<div class="calculation-cost__field min">
+					<label>Количество, м3</label>
+					<input placeholder="1"/>
+				</div>
+				<div class="calculation-cost__field middle">
+					<label>Аренда б-насоса</label>
+					<input placeholder="Не требуется"/>
+				</div>
+				<div class="calculation-cost__field min">
+					<label>Количество часов</label>
+					<input placeholder="5"/>
+				</div>
+				<div class="calculation-cost__field max">
+					<label>Адрес доставки</label>
+					<input placeholder="_"/>
+				</div>
+			</div>
+			<div class="forms_container__button"><a href="#">рассчитать</a></div>
+		</div>
+	</div>
+	<block-with-img>   
+		<div class="text">
+			<div class="title">Бетон с доставкой      </div>
+			<p>Производственная компания "Нагорный Бетонный Завод" занимается <a href="#">производством бетона</a>, бетонных растворов и цементно-песчаный смесей высочайшего качества. Так же мы осуществляем <a href="#">доставку бетона по Нижнему Новгороду и области</a> в кратчайшие сроки.</p>
+			<p>Бетон – это композиционный материал, состоящий из четырех основных элементов: воды, цемента, мелких и крупных заполнителей. В настоящее время он является материалом №1 в строительстве, занимая главенствующую позицию. Это происходит благодаря универсальности бетона, его прочности, а так же простоте использования.</p>
+		</div>
+		<div class="img"><img src="img/content/beton-c-dostavkoi.jpg" alt=""/></div>
+	</block-with-img>
+	<div class="buy-one-click__container" style="background: url(img/sprite/buy-1-click.jpg);">
+		<div class="buy-one-click forms_container">
+			<div class="buy-one-click__title">
+				<p>заказ бетона в один клик по&nbsp;самой выгодной цене</p>
+			</div>
+			<div class="buy-one-click__body">
+				<div class="buy-one-click__field max">      
+					<label>Ваше имя</label>
+					<input placeholder="_"/>
+				</div>
+				<div class="buy-one-click__field middle">       
+					<label>Телефон</label>
+					<input placeholder="+ 7 (___) ___-__-__"/>
+				</div>
+			</div>
+			<div class="forms_container__button"><a href="#">заказать</a></div>
+		</div>
+	</div>
+	<content-with-img>
+		<div class="content-with-img__header">
+			<div class="content-with-img__img"><img src="img/content/marki-betona.jpg" alt=""/></div>
+			<div class="content-with-img__text">
+				<div class="title">Какие мы предлагаем марки бетона и где они применяются?</div>
+				<div class="subtitle"> 
+					<p><a href="#">Марка бетона</a> показывает предел его прочности при сжатии и обозначается латинской буквой "М" и цифрами от 50 до 100, которые обозначают этот самый предел на сжатие в кг/см2. В зависимости от марки определяется и область использования бетона.</p>
+				</div>
+			</div>
+		</div>
+		<div class="content-with-img__body">
+			<p><span>Бетон М100</span> – один из легких типов бетона, применяемый при заливке фундамента и монолитных плит, для бетонной подготовки при работе с арматурой, а так же в дорожном строительстве. В основном укладывается тонким слоем на грунт или специальную песчаную подушку.</p>
+			<p><span>Бетон М150</span> – так же является легким бетоном. Применяется для заливки монолитных плит и фундаментов при проведении подготовительных работ. Широко используется для образования стяжек при заливке полов, а так же при изготовлении бетонных тротуаров и бордюров. Иногда используется при строительстве небольших сооружений.</p>
+			<p><span>Бетон М200</span> – используется в весьма широком спектре строительных работ, так как обладает высокой прочностью: строительство фундаментов, подпорных стен, обустройстве дорог и площадок. Применяется так же для строительства бетонных лестниц.</p>
+			<p class="mobile-hide desktop-on"><span>Бетон М250</span> – по области применения схож с М200. Однако обладает большей прочностью, а потому может использоваться при изготовлении плит перекрытий с небольшой нагрузкой.</p>
+			<p class="mobile-hide desktop-on"><span>Бетон М300</span> – универсальная, а потому самая популярная марка. Применяется при возведении стен, строительстве монолитных фундаментов (в том числе ленточных и свайно-ростверковых), для изготовления заборов, лестниц, площадок и так далее.</p>
+			<p class="mobile-hide desktop-on"><span>Бетон М350</span> – широко применяется в монолитном домостроении, при возведении зданий общественного назначения, для изготовления дорожных плит аэродромов, несущих колонн и т.д., так как отличается высокой прочностью и способен выдерживать повышенные нагрузки. Может использоваться при производстве балок и многопустотных плит перекрытия.</p>
+			<p class="mobile-hide desktop-on"><span>Бетон М400</span> – отличается быстрым схватыванием, однако и более высокой стоимостью. А потому менее популярен. За счет своей высокой надежности и прочности является незаменимым материалом при строительстве объектов, к которым предъявляются особые требования, например: банковские хранилища, гидротехнические соединения, аквапарки, бассейны, торговые и развлекательные комплексы и т.д.</p>
+			<p class="mobile-hide desktop-on"><span>Бетон М450</span> – имеет ограниченный спектр применения. Используется в гражданском строительстве для возведения плотин, дамб, метро и подобных объектов.</p>
+			<p class="mobile-hide desktop-on"><span>Бетон М500 и М550</span>  – отличаются самой высокой прочностью, так как имеют в своем составе большой процент цемента. Для возведения зданий применяются очень редко, используясь в основном в промышленном строительстве для возведения конструкций особого назначения.</p>
+		</div>
+	</content-with-img>
+	<div class="block-for-features__container" style="background: url(img/sprite/fon-white.jpg);">
+		<block-for-features>
+			<div class="title">Основные характеристики бетона</div>
+			<div class="feature-block">
+				<div class="feature-block__title"><img class="feature-block__img" src="img/content/durability.svg" alt="" role="presentation"/>
+					<div class="feature-block__text">Прочность
+					</div>
+				</div>
+				<div class="feature-block__desc">
+					<p>
+						Является наиважнейшим свойством бетона, ведь от нее зависит его дальнейшая эксплуатация. Критерий прочности – это предел прочности бетона при сжатии, ведь бетон сильнее сопротивляется именно ему, нежели растяжению. Увеличение прочности происходит за счет физико-химических процессов взаимодействия цемента с водой. Они прекращаются, когда смесь высыхает или замерзает, а значит важно, чтобы бетон затвердевал в течение строго положенного отрезка времени.
+						
+					</p>
+				</div>
+			</div>
+			<div class="feature-block">
+				<div class="feature-block__title"><img class="feature-block__img" src="img/content/uniformity.svg" alt="" role="presentation"/>
+					<div class="feature-block__text">Однородность
+					</div>
+				</div>
+				<div class="feature-block__desc">
+					<p>
+						Это серьезное технологическое требование. На однородность влияет качество цемента и заполнителей, пропорции используемых составляющих, количество которых должно быть четко выверенно, а так же тщательность приготовления самой смеси. От однородности бетона напрямую зависит его прочность.        
+						
+					</p>
+				</div>
+			</div>
+			<div class="feature-block">
+				<div class="feature-block__title"><img class="feature-block__img" src="img/content/density.svg" alt="" role="presentation"/>
+					<div class="feature-block__text">Плотность
+					</div>
+				</div>
+				<div class="feature-block__desc">
+					<p>
+						Под плотностью понимается отношение массы бетона к его объему (кг/м3). Плотность так же сильно влияет на качество: чем она выше, тем прочнее бетон, а значит – тем выше его качество. На данное свойство существенное влияние оказывает наличие пор, которые образуются при изготовлении из-за испарения излишков воды, плохого перемешивания или из-за недостаточного количество цемента.
+						
+					</p>
+				</div>
+			</div>
+		</block-for-features>
+	</div>
+	<block-for-advantages>
+		<div class="title">Наши преимущества</div>
+		<div class="advantage-block"><img class="advantage-block__img" src="img/content/advantage--1.png" alt="" role="presentation"/>
+			<div class="advantage-block__title">Надёжный партнёр
+			</div>
+			<div class="advantage-block__desc"> Стабильность сейчас, завтра и в долгосрочной перспективе
+			</div>
+		</div>
+		<div class="advantage-block"><img class="advantage-block__img" src="img/content/advantage--2.png" alt="" role="presentation"/>
+			<div class="advantage-block__title">Независимость
+			</div>
+			<div class="advantage-block__desc"> Собственный автотранспорт, производство и складская база, возможность принятия решений самостоятельно и быстро.
+			</div>
+		</div>
+		<div class="advantage-block"><img class="advantage-block__img circle" src="img/content/advantage--3.svg" alt="" role="presentation"/>
+			<div class="advantage-block__title">Инновации
+			</div>
+			<div class="advantage-block__desc"> Мы всегда на шаг впереди.
+			</div>
+		</div>
+		<div class="advantage-block mobile-hide tablet-on"><img class="advantage-block__img circle" src="img/content/advantage--4.svg" alt="" role="presentation"/>
+			<div class="advantage-block__title">Успех компании – наши работники
+			</div>
+			<div class="advantage-block__desc"> Наши результаты – итог сплочённой командной работы мотивированных и профессиональных сотрудников.
+			</div>
+		</div>
+		<div class="advantage-block mobile-hide tablet-on"><img class="advantage-block__img circle" src="img/content/advantage--5.svg" alt="" role="presentation"/>
+			<div class="advantage-block__title">Наивысшее качество во всём
+			</div>
+			<div class="advantage-block__desc"> Высокое качество обслуживания и выпускаемой продукции, старание помогать успеху наших заказчиков. Эта цель для нас приоритетна.
+			</div>
+		</div>
+		<div class="advantage-block mobile-hide tablet-on"><img class="advantage-block__img" src="img/content/advantage--6.png" alt="" role="presentation"/>
+			<div class="advantage-block__title">Выполнение обязательств
+			</div>
+			<div class="advantage-block__desc"> Безопасность людей, правила честной конкуренции имеют для нас огромное значение. Мы всегда думаем о завтрашнем дне.
+			</div>
+		</div>
+	</block-for-advantages>
+	<div class="block-for-news__container" style="background: url(img/sprite/fon-white.jpg);">
+		<block-for-articles>
+			<div class="title">Новости</div>
+			<div class="article-block">
+				<div class="article-block__date">12/03/2018
+				</div>
+				<div class="article-block__title">Обновление цен на бетон и аренду спецтехники
+				</div>
+				<div class="article-block__desc">Компания "Нагорный Бетонный Завод" обновила цены на продукцию и аренду спецтехники. 
+				</div><a class="article-block__button" href="#">Читать полностью</a>
+			</div>
+			<div class="article-block">
+				<div class="article-block__date">11/02/2018
+				</div>
+				<div class="article-block__title">Обновление дизайна сайта
+				</div>
+				<div class="article-block__desc">Ура! Сегодня мы обновили наш сайт, чтобы Вам было удобно и просто делать заказ и находить нужную информацию.
+				</div><a class="article-block__button" href="#">Читать полностью</a>
+			</div>
+			<div class="article-block">
+				<div class="article-block__date">9/02/2018
+				</div>
+				<div class="article-block__title">Сегодня обновился прайс-лист на бетон
+				</div>
+				<div class="article-block__desc">Сегодня мы обновили прайс-лист на бетонные растворы. 
+				</div><a class="article-block__button" href="#">Читать полностью</a>
+			</div>
+			<div class="article-block">
+				<div class="article-block__date">21/01/2018
+				</div>
+				<div class="article-block__title">Обновление цен на доставку
+				</div>
+				<div class="article-block__desc">Компания "Нагорный Бетонный Завод" обновила цены на доставку всех марок бетона.
+				</div><a class="article-block__button" href="#">Читать полностью</a>
+			</div>
+		</block-for-articles>
+	</div>
+	<p>12</p>
+</body>
+<link rel="preload" href="styles/index.css" as="style" id="mainFileStyles">
+<script>document.getElementById('mainFileStyles').setAttribute('rel', 'stylesheet');</script>

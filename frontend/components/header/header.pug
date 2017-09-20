@@ -1,0 +1,45 @@
+mixin header()
+  header
+    +b.DIV.header__container
+      +e.A(href="#").logo
+      +e.content
+        +b.header-callback
+          +e.DIV.tel
+            a(href="tel:89201234567").number +7 920 <span>123 45 67</span>
+          +e.DIV.form
+            a(href="#callback").button Заказать звонок
+        +b.header-search
+          +e.A(href="#").help помощь заказчику
+          +e.FORM(action="/search" method="get").form
+            input(type="checkbox")#showSearchForm
+            label(for="showSearchForm")
+            input(type="search" placeholder="Поиск" autocomplete="off")
+            span#fast-search-loader Загрузка результатов...   
+            input(type="submit")
+            .ornamental-line                  
+        +b.header-menu
+          input(type="checkbox")#showMainMenu
+          label(for="showMainMenu")  ☰
+          nav
+            ul.root_menu
+              li                
+                input(type="checkbox")#showSubMenu1
+                label(for="showSubMenu1")
+                a(href="#") наша компания
+                ul.submenu
+                  li: a(href="#") Наше производство
+                  li: a(href="#") Наша лаборатория
+                  li: a(href="#") Наши объекты
+              li: a(href="#") прайт-лист
+              li: a(href="#") продукция
+              li                
+                input(type="checkbox")#showSubMenu2
+                label(for="showSubMenu2")
+                a(href="#") виды оплаты
+                ul.submenu
+                  li: a(href="#") PayPal
+                  li: a(href="#") WebMany
+                  li: a(href="#") Endex 
+              li: a(href="#") контакты
+              li: a(href="#") акции
+              li: a(href="#") нерудные материалы

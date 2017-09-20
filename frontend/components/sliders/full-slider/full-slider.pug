@@ -1,0 +1,37 @@
+mixin full-slider() 
+  link(href="js/owl.carousel/owl.carousel.min.css" rel="stylesheet")
+  link(href="js/owl.carousel/owl.theme.default.min.css" rel="stylesheet")
+
+  slider.owl-carousel.owl-theme.owl-full-slider
+    .owl-item
+      .text
+        h2 Нагорный Бетонный&nbsp;Завод №1
+        h3 Соответствие всем современным требованиям и стандартам
+        a(href="#") Подробнее
+      picture
+        source(media="(min-width: 1170px)" srcset="img/content/main-slide-1.jpg")
+        source(media="(min-width: 768px)" srcset="img/content/main-slide-1--middle.jpg")
+        img(src="img/content/main-slide-1--mini.jpg" alt="")
+    .owl-item
+      .text
+        h2 Заголовок
+        h3 Подзаголовок
+        a(href="#") Подробнее
+      img(src="img/content/main-slide-1.jpg" alt="")
+  
+  script(src="js/jquery/jquery.min.js")
+  script(src="js/owl.carousel/owl.carousel.min.js")
+  script.
+    var owl = $('.owl-full-slider');
+    owl.owlCarousel({
+      margin: 0,
+      nav: true,
+      navText: true,
+      loop: true,
+      dots: false,
+      responsive: {
+        0: {
+          items: 1
+        }
+      }
+    })
