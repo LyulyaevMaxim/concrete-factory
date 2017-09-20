@@ -9,6 +9,7 @@ footer {
   @media (min-width: $tablet) {
     padding-left: 15px;
     padding-right: 21px;
+    padding-bottom: 18px;
   }
 
   @media (min-width: $desktop) {
@@ -214,3 +215,144 @@ footer {
     }
   }
 }
+
+.footer-logo {
+  background: #898582;
+  padding-top: 24px;
+  padding-bottom: 33px;
+
+  @media (min-width: $tablet) {
+    padding-top: 26px;
+  }
+
+  &__container {
+    @media (min-width: $tablet) {
+      display: flex;
+      align-items: center;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    @media (min-width: $desktop) {
+      max-width: $desktop;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &__owner,
+  &__creator {
+    a {
+      display: flex;
+      flex-direction: column;
+
+      @media (min-width: $tablet) {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+      }
+
+      &::before {
+        content: "";
+      }
+    }
+
+    p {
+      font-weight: $RobotoMedium;
+      font-size: 12px;
+      color: $white-color;
+    }
+  }
+
+  &__owner {
+    max-width: 213px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (min-width: $tablet) {
+      margin: 0;
+      width: 50%;
+      max-width: none;
+    }
+
+    a {
+      &::before {
+        @mixin bg logo--white.png;
+        margin-left: 30px;
+        margin-bottom: 10px;
+
+        @media (min-width: $tablet) {
+          margin-left: 0;
+          margin-bottom: 0;
+          margin-right: 16px;
+          min-width: 120px;
+        }
+
+        @media (min-width: $desktop) {
+          margin-right: 21px;
+        }
+      }
+    }
+
+    p {
+      line-height: 1.5;
+    }
+  }
+
+  &__owner + &__creator {
+    margin-top: 37px;
+
+    @media (min-width: $tablet) {
+      margin-top: 0;
+    }
+  }
+
+  &__creator {
+    max-width: 238px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    @media (min-width: $tablet) {
+      width: 45.3%;
+      margin-right: auto;
+      margin-left: auto;
+      max-width: none;
+    }
+
+    @media (min-width: $desktop) {
+      margin-right: 0;
+      width: 43%;
+    }
+
+    a {
+      &::before {
+        @mixin bg logo--webmechanica.png;
+        margin-left: 47px;
+        margin-bottom: 13px;
+
+        @media (min-width: $tablet) {
+          margin-left: 0;
+          margin-bottom: 0;
+          margin-right: 16px;
+          min-width: 125px;
+        }
+
+        @media (min-width: $desktop) {
+          margin-right: 38px;
+        }
+      }
+    }
+
+    p {
+      line-height: 1.25;
+
+      @media (min-width: $desktop) {
+        max-width: 200px;
+      }
+    }
+  }
+}
+
