@@ -49,6 +49,7 @@
 
     @media (min-width: $desktop) {
       padding-bottom: 82px;
+      overflow-x: hidden;
     }
   }
 }
@@ -61,6 +62,7 @@
   order: 0;
   background: #f2f2f1;
   padding: 5px 0px;
+  position: relative;
 
   @media (min-width: $tablet) {
     background: no-repeat;
@@ -91,13 +93,57 @@
   }
 
   &__form {
-    .button {
-      width: 35px;
-      height: 33px;
-      font-size: 0;
+    @media (min-width: $tablet) {
+      height: 45px;
+    }
 
-      @mixin inline-svg;
-      background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 606.61 853.23' fill='%231A6191'%3E%3Cpath d='M479.4 499C467 486.3 452 479.3 436 479.3c-15.6 0-30.7 6.8-43.6 19.8L352 539.3l-10-5c-4.6-2.4-9-4.6-12.6-7-38-24-72.4-55.4-105.4-96-16-20.2-26.8-37.2-34.6-54.5 10.5-9.6 20.3-19.6 29.7-29.2l11-11c26.8-26.7 26.8-61.6 0-88.5l-35-34.8-12-12.2c-7.7-8-15.7-16-24-23.8-12.5-12.3-27.3-18.8-43-18.8-15.6 0-30.7 6.5-43.5 18.8l-.2.3-43.5 44C12.4 237.7 3 257.6 1 280.8c-3 37.3 8 72 16.4 95 20.7 56 51.7 107.7 98 163.3 56 67 123.4 119.8 200.5 157 29.4 14 68.7 30.5 112.6 33.4l8 .2c29.6 0 54.5-10.7 74-31.8 0-.3.3-.4.4-.7 6.7-8 14.4-15.3 22.4-23 5.5-5.4 11.2-11 16.7-16.7 12.8-13 19.4-28.5 19.4-44.3 0-15.8-6.8-31-19.7-44l-70.3-70.4zm45.8 135c-5 5.3-10 10-15.6 15.5-8.3 8-16.7 16.3-24.7 25.6-13 14-28.2 20.5-48.2 20.5h-6c-38-2.6-73.3-17.4-99.8-30-72.4-35.2-136-85-189-148C98.5 464.7 69.3 416 50 363.8c-12-32-16.4-56.8-14.5-80.3 1.3-15 7-27.4 17.7-38L97 202c6-5.8 12.8-9 19.3-9 8 0 14.6 4.8 18.7 9l.4.3c7.8 7.3 15.2 15 23 23l12.2 12.3 35 35c13.5 13.6 13.5 26 0 39.7l-11 11c-10.8 11-21 21.3-32.2 31.2-.2.3-.5.4-.6.7-11 11-9 21.7-6.7 29l.5 1.2c9 22 22 42.8 41.4 67.5 35.3 43.5 72.6 77.5 113.7 103.4 5.2 3.4 10.6 6 15.7 8.6 4.6 2.3 9 4.5 12.7 6.8l1.6 1c4.4 2 8.5 3 12.7 3 10.6 0 17.3-6.6 19.5-8.7l43.8-43.7c4.3-4.4 11.2-9.6 19.3-9.6 7.8 0 14.4 5 18.3 9.3 0 .2 0 .2.3.3l70.5 70.5c13.3 13 13.3 26.5.2 40z'/%3E%3Cpath d='M505.8 196L382.5 319.5V254c0-9.4-7.7-17-17.2-17s-17.3 7.6-17.3 17V363c0 4.6 2 9 5 12.2 3.3 3.3 7.7 5 12.3 5h107.5c4.8 0 9-1.8 12.2-5 3-3 5-7.4 5-12.2 0-9.5-7.7-17.2-17.2-17.2H405l125.2-125c6.7-6.8 6.7-17.8 0-24.5-6.8-6.6-17.7-6.6-24.4 0z'/%3E%3C/svg%3E");
+    .button {
+      .title {
+        -moz-user-select: none;
+        -webkit-user-select: none;
+      }
+
+      label {
+        display: none;
+        font-weight: $RobotoMedium;
+        font-size: 15px;
+        line-height: 1.733;
+        color: #1a6191;
+        margin-right: 3px;
+      }
+
+      input[type="tel"] {
+        display: none;
+        font-weight: $RobotoMedium;
+        font-size: 15px;
+        line-height: 1.733;
+        color: $gray-color;
+        background: transparent;
+        border: none;
+        width: 120px;
+        margin-right: auto;
+      }
+
+      input[type="submit"] {
+        pointer-events: none;
+        width: 35px;
+        height: 33px;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+
+        @mixin inline-svg;
+        background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 606.61 853.23' fill='%231A6191'%3E%3Cpath d='M479.4 499C467 486.3 452 479.3 436 479.3c-15.6 0-30.7 6.8-43.6 19.8L352 539.3l-10-5c-4.6-2.4-9-4.6-12.6-7-38-24-72.4-55.4-105.4-96-16-20.2-26.8-37.2-34.6-54.5 10.5-9.6 20.3-19.6 29.7-29.2l11-11c26.8-26.7 26.8-61.6 0-88.5l-35-34.8-12-12.2c-7.7-8-15.7-16-24-23.8-12.5-12.3-27.3-18.8-43-18.8-15.6 0-30.7 6.5-43.5 18.8l-.2.3-43.5 44C12.4 237.7 3 257.6 1 280.8c-3 37.3 8 72 16.4 95 20.7 56 51.7 107.7 98 163.3 56 67 123.4 119.8 200.5 157 29.4 14 68.7 30.5 112.6 33.4l8 .2c29.6 0 54.5-10.7 74-31.8 0-.3.3-.4.4-.7 6.7-8 14.4-15.3 22.4-23 5.5-5.4 11.2-11 16.7-16.7 12.8-13 19.4-28.5 19.4-44.3 0-15.8-6.8-31-19.7-44l-70.3-70.4zm45.8 135c-5 5.3-10 10-15.6 15.5-8.3 8-16.7 16.3-24.7 25.6-13 14-28.2 20.5-48.2 20.5h-6c-38-2.6-73.3-17.4-99.8-30-72.4-35.2-136-85-189-148C98.5 464.7 69.3 416 50 363.8c-12-32-16.4-56.8-14.5-80.3 1.3-15 7-27.4 17.7-38L97 202c6-5.8 12.8-9 19.3-9 8 0 14.6 4.8 18.7 9l.4.3c7.8 7.3 15.2 15 23 23l12.2 12.3 35 35c13.5 13.6 13.5 26 0 39.7l-11 11c-10.8 11-21 21.3-32.2 31.2-.2.3-.5.4-.6.7-11 11-9 21.7-6.7 29l.5 1.2c9 22 22 42.8 41.4 67.5 35.3 43.5 72.6 77.5 113.7 103.4 5.2 3.4 10.6 6 15.7 8.6 4.6 2.3 9 4.5 12.7 6.8l1.6 1c4.4 2 8.5 3 12.7 3 10.6 0 17.3-6.6 19.5-8.7l43.8-43.7c4.3-4.4 11.2-9.6 19.3-9.6 7.8 0 14.4 5 18.3 9.3 0 .2 0 .2.3.3l70.5 70.5c13.3 13 13.3 26.5.2 40z'/%3E%3Cpath d='M505.8 196L382.5 319.5V254c0-9.4-7.7-17-17.2-17s-17.3 7.6-17.3 17V363c0 4.6 2 9 5 12.2 3.3 3.3 7.7 5 12.3 5h107.5c4.8 0 9-1.8 12.2-5 3-3 5-7.4 5-12.2 0-9.5-7.7-17.2-17.2-17.2H405l125.2-125c6.7-6.8 6.7-17.8 0-24.5-6.8-6.6-17.7-6.6-24.4 0z'/%3E%3C/svg%3E");
+
+        @media (min-width: $tablet) {
+          display: none;
+        }
+      }
+    }
+
+    .button {
+      font-size: 0;
+      cursor: pointer;
 
       @media (min-width: $tablet) {
         background: none;
@@ -112,6 +158,73 @@
         justify-content: center;
         border-radius: 60px;
         padding: 1px 42px;
+      }
+    }
+
+    #showCallForm {
+      display: none;
+
+      &:checked ~ .button {
+        display: flex;
+        align-items: center;
+        width: 100vw;
+        position: absolute;
+        left: 0;
+        top: -28px;
+        height: 45px;
+        padding: 50px 10px;
+
+        @media (min-width: $tablet) {
+          top: -64px;
+          padding: 90px 10px;
+          left: initial;
+          right: -15px;
+          border: none;
+        }
+
+        .container {
+          display: flex;
+          align-items: center;
+          width: calc(100vw - 24px);
+          max-width: 435px;
+          margin-left: auto;
+          margin-right: auto;
+          height: 45px;
+          padding-left: 22px;
+          padding-right: 6px;
+          background: #f2f2f1;
+          border: 2px solid #1a6191;
+          border-radius: 60px;
+
+          @media (min-width: $tablet) {
+            background: $white-color;
+            margin-right: 0;
+          }
+
+          @media (min-width: $desktop) {
+            margin-right: 8px;
+          }
+        }
+
+        .title {
+          display: none;
+        }
+
+        label {
+          display: block;
+        }
+
+        input[type="tel"] {
+          display: block;
+        }
+
+        input[type="submit"] {
+          pointer-events: all;
+
+          @media (min-width: $tablet) {
+            display: block;
+          }
+        }
       }
     }
   }
@@ -170,7 +283,8 @@
           @media (min-width: $desktop) {
             padding: 0px 8px;
             position: absolute;
-            right: 2px;
+            right: 13px;
+            top: 13px;
             z-index: 101;
           }
         }
@@ -192,6 +306,8 @@
       max-height: 18px;
       background-size: 18px 18px;
       cursor: pointer;
+      -moz-user-select: none;
+      -webkit-user-select: none;
     }
 
     input[type="submit"] {
@@ -254,8 +370,8 @@
 
       @media (min-width: $desktop) {
         position: initial;
-        margin-top: -13px;
-        margin-right: -13px;
+        margin-top: -9px;
+        margin-right: 0;
         padding-left: 18px;
       }
     }
