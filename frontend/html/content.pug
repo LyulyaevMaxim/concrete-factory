@@ -1,0 +1,59 @@
+include _assets/bemto/bemto
+- set_bemto_settings({ modifier: "--" , class_delimiter :  ' | ' })
+
+include ../components/head/head
+include ../components/header/header
+include ../components/sliders/full-slider/full-slider
+include ../components/forms/forms
+include ../components/content/content
+include ../components/footer/footer
+
+doctype html
+html(lang="ru")
+  head
+    +head({
+      "title": "Главная",
+      "description": "Главная страница",
+      "style_page": "styles/content.css"
+    })
+    style body { opacity: 0;}
+    
+
+
+
++header()
++b.BODY.content-page
+  h1 Заголовок первого уровня
+  p Производственная компания "Нагорный Бетонный Завод" занимается <a href="#">производством бетона</a>, бетонных растворов и цементно-песчаный смесей высочайшего качества. Так же мы осуществляем <a href="#">доставку бетона по Нижнему Новгороду и области</a> в кратчайшие сроки. 
+  h2 Заголовок второго уровня
+  p Производственная компания "Нагорный Бетонный Завод" занимается <a href="#">производством бетона</a>, бетонных растворов и цементно-песчаный смесей высочайшего качества.  
+  h3 Заголовок третьего уровня
+  p Производственная компания "Нагорный Бетонный Завод" занимается <a href="#">производством бетона</a>, бетонных растворов и цементно-песчаный смесей высочайшего качества.  
+  h4 Заголовок четвёртого уровня
+  p Производственная компания "Нагорный Бетонный Завод" занимается <a href="#">производством бетона</a>, бетонных растворов и цементно-песчаный смесей высочайшего качества.  
+  h5 Заголовок пятого уровня
+  p Производственная компания "Нагорный Бетонный Завод" занимается <a href="#">производством бетона</a>, бетонных растворов и цементно-песчаный смесей высочайшего качества.  
+  h6 Заголовок шестого уровня
+  p Производственная компания "Нагорный Бетонный Завод" занимается <a href="#">производством бетона</a>, бетонных растворов и цементно-песчаный смесей высочайшего качества.
+  div(style="height: 202px")
+  
+  +block-for-lists()
+  +block-for-tables() 
+  //- +full-slider()
+  //- .calculation-cost__container(style="background: url(img/sprite/fon-white.jpg);")
+  //-   +form--calculation-cost
+  //- +block-with-img()
+  //- .buy-one-click__container(style="background: url(img/sprite/buy-1-click.jpg);")
+  //-   +form--buy-one-click()
+  //- +content-with-img()
+  //- .block-for-features__container(style="background: url(img/sprite/fon-white.jpg);")
+  //-   +block-for-features()
+  //- +block-for-advantages() 
+  //- .block-for-news__container(style="background: url(img/sprite/fon-white.jpg);")
+  //-   +block-for-articles()
+  +footer()
+          
+
+link(rel="preload" href="styles/content.css" as="style" id="mainFileStyles")
+script.
+ document.getElementById('mainFileStyles').setAttribute('rel', 'stylesheet');
