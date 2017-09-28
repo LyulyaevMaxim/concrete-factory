@@ -3,10 +3,22 @@ include _assets/bemto/bemto
 
 include ../components/head/head
 include ../components/header/header
-include ../components/sliders/full-slider/full-slider
-include ../components/forms/forms
-include ../components/content/content
 include ../components/footer/footer
+//- контент
+include ../components/content/block-with-img/block-with-img
+include ../components/content/content-with-img/content-with-img
+include ../components/content/block-for-features/block-for-features
+include ../components/content/block-for-advantages/block-for-advantages
+include ../components/content/block-for-articles/block-for-articles
+include ../components/content/block-for-lists/block-for-lists
+include ../components/content/files-for-download/files-for-download
+//- формы
+include ../components/forms/calculation-cost/calculation-cost
+include ../components/forms/feedback/feedback
+include ../components/forms/buy-one-click/buy-one-click
+//- слайдеры
+include ../components/sliders/tables/table
+include ../components/sliders/full-slider/full-slider
 
 doctype html
 html(lang="ru")
@@ -38,6 +50,6 @@ html(lang="ru")
   +footer()
           
 
-link(rel="preload" href="styles/index.css" as="style" id="mainFileStyles")
+link(rel="preload" href="styles/styles.css" as="style" id="mainFileStyles")
 script.
  document.getElementById('mainFileStyles').setAttribute('rel', 'stylesheet');

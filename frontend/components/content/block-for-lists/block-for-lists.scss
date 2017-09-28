@@ -1,0 +1,164 @@
+block-for-lists {
+  padding-top: 45px;
+
+  @media (min-width: $tablet) {
+    padding-top: 13px;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: $desktop;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 28px;
+    padding-bottom: 20px;
+  }
+
+  .title {
+    font-weight: $RobotoBlack;
+    color: $black-color;
+    font-size: 30px;
+    line-height: 0.867;
+    padding-left: 6px;
+    padding-right: 9px;
+
+    @media (min-width: $tablet) {
+      padding-left: 14px;
+      padding-right: 14px;
+    }
+
+    @media (min-width: $desktop) {
+      font-size: 36px;
+      line-height: 0.722;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    & + .subtitle {
+      margin-top: 20px;
+
+      @media (min-width: $desktop) {
+        margin-top: 53px;
+      }
+    }
+  }
+
+  .subtitle {
+    font-weight: $RobotoBlack;
+    color: $black-color;
+    font-size: 21px;
+    line-height: 1.238;
+    padding-left: 7px;
+    padding-right: 7px;
+
+    @media (min-width: $tablet) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    @media (min-width: $desktop) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    & + ul {
+      margin-top: 19px;
+    }
+
+    & + ol {
+      margin-top: 19px;
+
+      @media (min-width: $tablet) {
+        margin-top: 21px;
+      }
+
+      @media (min-width: $desktop) {
+        margin-top: 26px;
+      }
+    }
+  }
+
+  ul,
+  ol {
+    li {
+      font-weight: $RobotoLight;
+      font-size: 14px;
+      line-height: 1.5;
+      color: $black-color;
+    }
+
+    span {
+      font-weight: $RobotoMedium;
+    }
+
+    & + * {
+      margin-top: 19px;
+
+      @media (min-width: $tablet) {
+        margin-top: 26px;
+      }
+
+      @media (min-width: $desktop) {
+        margin-top: 48px;
+      }
+    }
+  }
+
+  ul {
+    list-style-type: disc;
+    margin-left: 25px;
+    margin-top: 19px;
+
+    @media (min-width: $tablet) {
+      margin-left: 32px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-left: 15px;
+    }
+
+    li {
+      @media (min-width: $tablet) {
+        padding-right: 15px;
+      }
+
+      & + li {
+        margin-top: 21px;
+      }
+    }
+  }
+
+  ol {
+    counter-reset: сounterItems;
+    padding-left: 8px;
+    padding-right: 13px;
+
+    @media (min-width: $tablet) {
+      padding-right: 15px;
+      padding-left: 12px;
+    }
+
+    @media (min-width: $desktop) {
+      padding-left: 0;
+    }
+
+    li {
+      display: flex;
+
+      &::before {
+        counter-increment: сounterItems;
+        content: counter(сounterItems) ".";
+        font-weight: $RobotoBlack;
+        font-size: 24px;
+        line-height: 0.875;
+        color: $black-color;
+        margin-top: 6px;
+        min-width: 33px;
+      }
+
+      & + li {
+        margin-top: 21px;
+      }
+    }
+  }
+}

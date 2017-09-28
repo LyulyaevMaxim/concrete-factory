@@ -1,0 +1,200 @@
+.calculation-cost__container {
+  padding-top: 19px;
+  padding-bottom: 20px;
+
+  @media (min-width: $desktop) {
+    padding-top: 80px;
+    padding-bottom: 84px;
+  }
+
+  .calculation-cost {
+    @media (min-width: $desktop) {
+      display: flex;
+      align-items: center;
+      max-width: $desktop;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+.calculation-cost__title {
+  padding-left: 17px;
+  padding-right: 19px;
+
+  @media (min-width: $desktop) {
+    display: flex;
+    align-items: flex-start;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  p {
+    background: $blue-color;
+    padding: 10px;
+    font-size: 24px;
+    font-weight: $RobotoMedium;
+    color: $white-color;
+    text-transform: uppercase;
+    line-height: 1.25;
+    width: 284px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    @media (min-width: $desktop) {
+      font-size: 30px;
+      line-height: 1.4;
+      width: 238px;
+      text-align: left;
+      padding-left: 20px;
+      padding-top: 14px;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 24px 142px 0 142px;
+    border-color: $blue-color transparent transparent transparent;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (min-width: $desktop) {
+      border-width: 96px 0 96px 32px;
+      border-color: transparent transparent transparent $blue-color;
+    }
+  }
+}
+
+.calculation-cost__body {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 19px;
+  max-width: 314px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: $tablet) {
+    margin-top: 17px;
+    max-width: 627px;
+  }
+
+  @media (min-width: $desktop) {
+    justify-content: space-between;
+    margin-top: 5px;
+    max-width: 636px;
+  }
+}
+
+.calculation-cost__field {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 22px;
+
+  @media (min-width: $tablet) {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 25px;
+  }
+
+  @media (max-width: 767px) {
+    &:nth-child(2),
+    &:nth-child(4) {
+      width: 50%;
+      margin-top: 25px;
+      margin-bottom: 0;
+    }
+
+    &:nth-child(2) {
+      order: 5;
+    }
+
+    &:nth-child(4) {
+      order: 4;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  label {
+    text-align: center;
+
+    @media (min-width: $tablet) {
+      margin-left: auto;
+      margin-right: 11px;
+      min-width: 118px;
+      width: 100%;
+      text-align: right;
+    }
+  }
+
+  input {
+    margin-top: 12px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (min-width: $tablet) {
+      margin: 0;
+    }
+  }
+
+  &.middle {
+    @media (min-width: $tablet) {
+      width: 358px;
+    }
+
+    @media (min-width: $desktop) {
+      width: 386px;
+    }
+  }
+
+  &.min {
+    @media (min-width: $tablet) {
+      width: 257px;
+    }
+
+    @media (min-width: $desktop) {
+      width: 240px;
+
+      label {
+        margin-right: 9px;
+      }
+    }
+  }
+
+  &.max {
+    input {
+      @media (min-width: $tablet) {
+        margin-right: 10px;
+      }
+
+      @media (min-width: $desktop) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.calculation-cost .forms_container__button {
+  margin-top: 23px;
+  text-align: center;
+
+  @media (min-width: $tablet) {
+    margin-top: 25px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 0;
+  }
+}

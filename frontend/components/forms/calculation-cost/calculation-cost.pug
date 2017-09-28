@@ -1,0 +1,22 @@
+mixin form--calculation-cost()
+  +b.DIV.calculation-cost.forms_container
+    +e.title
+      p рассчёт стоимости бетона с&nbsp;доставкой
+    +e.body
+      +e.field.middle        
+        label Тип бетона
+        input(placeholder="Бетон М-100 В 7.5, П3")
+      +e.field.min
+        label Количество, м3
+        input(placeholder="1")        
+      +e.field.middle
+        label Аренда б-насоса
+        input(placeholder="Не требуется")        
+      +e.field.min
+        label Количество часов
+        input(placeholder="5")        
+      +e.field.max
+        label Адрес доставки
+        input(placeholder="_")        
+    .forms_container__button
+      a(href="#") рассчитать

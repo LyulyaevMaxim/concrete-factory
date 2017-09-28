@@ -1,0 +1,131 @@
+content-with-img {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 8px;
+  padding-right: 3px;
+
+  @media (min-width: $tablet) {
+    padding-left: 15px;
+    padding-top: 18px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 80px;
+    padding-bottom: 70px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.content-with-img__header {
+  @media (min-width: $desktop) {
+    display: flex;
+    justify-content: space-between;
+    max-width: $desktop;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.content-with-img__img {
+  display: none;
+
+  @media (min-width: $desktop) {
+    display: flex;
+    width: 48.7%;
+  }
+
+  img {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.content-with-img__text {
+  @media (min-width: $desktop) {
+    width: 49%;
+    padding-top: 50px;
+  }
+
+  .title {
+    font-weight: $RobotoBlack;
+    font-size: 29px;
+    color: $black-color;
+    line-height: 1.3;
+
+    @media (min-width: $desktop) {
+      font-size: 36px;
+      line-height: 1.222;
+    }
+  }
+
+  .title + .subtitle {
+    @media (min-width: $desktop) {
+      margin-top: 28px;
+    }
+  }
+
+  .subtitle {
+    display: none;
+
+    @media (min-width: $desktop) {
+      display: block;
+      padding-left: 3px;
+      padding-right: 3px;
+    }
+
+    p {
+      font-weight: $RobotoLight;
+      font-size: 14px;
+      color: $black-color;
+      line-height: 1.5;
+    }
+
+    a {
+      color: $blue-color;
+    }
+  }
+}
+
+.content-with-img__header + .content-with-img__body {
+  margin-top: 8px;
+
+  @media (min-width: $tablet) {
+    margin-top: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 36px;
+  }
+}
+
+.content-with-img__body {
+  padding-right: 3px;
+  padding-left: 3px;
+
+  @media (min-width: $tablet) {
+    padding-left: 0;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: $desktop;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 21px;
+  }
+
+  p {
+    font-weight: $RobotoLight;
+    font-size: 14px;
+    color: $black-color;
+    line-height: 1.5;
+
+    span {
+      font-weight: $RobotoMedium;
+    }
+  }
+
+  p + p {
+    margin-top: 21px;
+  }
+}

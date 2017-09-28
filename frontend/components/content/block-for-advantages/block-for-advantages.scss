@@ -1,0 +1,128 @@
+block-for-advantages {
+  padding-top: 17px;
+  padding-bottom: 17px;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: $desktop;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    padding-top: 68px;
+    padding-bottom: 66px;
+  }
+
+  .title {
+    font-weight: $RobotoBlack;
+    font-size: 30px;
+    line-height: 1.2;
+    color: $black-color;
+    padding-left: 8px;
+    padding-right: 8px;
+
+    @media (min-width: $tablet) {
+      width: 100%;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    @media (min-width: $desktop) {
+      font-size: 36px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    & + .advantage-block {
+      margin-top: 15px;
+
+      @media (min-width: $desktop) {
+        margin-top: 49px;
+      }
+    }
+  }
+}
+
+.advantage-block {
+  @media (min-width: $tablet) {
+    width: 50%;
+  }
+
+  @media (min-width: $desktop) {
+    width: 31%;
+  }
+}
+
+.advantage-block + .advantage-block {
+  margin-top: 36px;
+
+  @media (min-width: $tablet) {
+    margin-top: 25px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 64px;
+  }
+}
+
+@media (min-width: $tablet) {
+  .advantage-block:nth-child(2) + .advantage-block {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: $desktop) {
+  .advantage-block:nth-child(3) + .advantage-block {
+    margin-top: 0;
+  }
+}
+
+.advantage-block__img {
+  display: block;
+  width: 180px;
+  height: 180px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &.circle {
+    border: 8px solid #186292;
+    border-radius: 50%;
+    padding: 30px;
+    background: #eeeeef;
+  }
+}
+
+.advantage-block__title {
+  font-weight: $RobotoBlack;
+  font-size: 21px;
+  line-height: 1;
+  color: #1a6191;
+  margin-top: 16px;
+  text-align: center;
+
+  @media (min-width: $desktop) {
+    margin-top: 42px;
+  }
+}
+
+.advantage-block__desc {
+  font-weight: $RobotoLight;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #898582;
+  margin-top: 5px;
+  text-align: center;
+
+  @media (min-width: $tablet) {
+    padding: 0 23px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 21px;
+    padding: 0 20px;
+  }
+}

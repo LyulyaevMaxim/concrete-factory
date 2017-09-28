@@ -1,0 +1,226 @@
+block-for-articles {
+  display: block;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: $desktop;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .title {
+    font-weight: $RobotoBlack;
+    font-size: 30px;
+    line-height: 1.467;
+    color: $black-color;
+    width: 100%;
+
+    @media (min-width: $desktop) {
+      font-size: 36px;
+    }
+
+    & + .article-block {
+    }
+  }
+}
+
+.article-block {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+
+  &.mobile-hide {
+    display: none;
+  }
+
+  @media (min-width: $tablet) {
+    &.tablet-on {
+      display: flex;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    &.desktop-on {
+      display: flex;
+    }
+  }
+}
+
+.article-block + .article-block {
+}
+
+.article-block__date {
+  font-weight: $RobotoLight;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #898582;
+  text-align: left;
+  width: 100%;
+}
+
+.article-block__title {
+  font-weight: $RobotoBlack;
+  font-size: 18px;
+  line-height: 1.3;
+  color: $blue-color;
+  text-align: left;
+  width: 100%;
+}
+
+.article-block__desc {
+  font-weight: $RobotoLight;
+  font-size: 14px;
+  line-height: 1.5;
+  color: $black-color;
+  hyphens: auto;
+  text-align: left;
+  width: 100%;
+}
+
+.article-block__button {
+  font-weight: $RobotoLight;
+  font-size: 14px;
+  color: #898582;
+  border: 2px solid #898582;
+  border-radius: 60px;
+  height: 45px;
+  width: 207px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+
+  &:hover {
+    background: #898582;
+    color: $white-color;
+  }
+}
+
+.block-for-news__container {
+  block-for-articles {
+    padding-top: 13px;
+    padding-bottom: 18px;
+
+    @media (min-width: $tablet) {
+      padding-top: 10px;
+      padding-left: 6px;
+      padding-bottom: 19px;
+    }
+
+    @media (min-width: $desktop) {
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 57px;
+      padding-bottom: 67px;
+    }
+
+    .title {
+      padding-left: 11px;
+      padding-right: 11px;
+
+      @media (min-width: $desktop) {
+        padding-left: 0;
+      }
+    }
+  }
+
+  block-for-articles .title + .article-block {
+    margin-top: 4px;
+
+    @media (min-width: $desktop) {
+      margin-top: 40px;
+    }
+  }
+
+  .article-block {
+    @media (min-width: $tablet) {
+      width: 44.2%;
+    }
+
+    @media (min-width: $desktop) {
+      width: 39.3%;
+    }
+  }
+
+  .article-block + .article-block {
+    margin-top: 40px;
+
+    @media (min-width: $tablet) {
+      margin-top: 37px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-top: 81px;
+    }
+  }
+
+  .article-block:nth-child(2) + .article-block {
+    @media (min-width: $tablet) {
+      margin-top: 6px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-top: 40px;
+    }
+  }
+
+  .article-block:nth-child(2n + 1) {
+    @media (min-width: $tablet) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media (min-width: $desktop) {
+      margin-right: 42px;
+    }
+  }
+
+  .article-block__date {
+    padding-left: 11px;
+    padding-right: 11px;
+
+    @media (min-width: $desktop) {
+      padding-left: 0;
+    }
+  }
+
+  .article-block__title {
+    margin-top: 5px;
+    padding-left: 11px;
+    padding-right: 11px;
+
+    @media (min-width: $desktop) {
+      padding-left: 0;
+      margin-top: 18px;
+    }
+  }
+
+  .article-block__desc {
+    margin-top: 9px;
+    padding-left: 11px;
+    margin-bottom: 17px;
+
+    @media (min-width: $desktop) {
+      padding-left: 0;
+      margin-top: 21px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .article-block__button {
+    margin-top: auto;
+
+    @media (min-width: $tablet) {
+      margin-right: 13%;
+    }
+
+    @media (min-width: $desktop) {
+      margin-left: 0;
+    }
+  }
+}

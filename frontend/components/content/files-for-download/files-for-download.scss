@@ -1,0 +1,99 @@
+files-for-download {
+  padding-left: 10px;
+  padding-top: 17px;
+  padding-bottom: 17px;
+
+  @media (min-width: $tablet) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: $desktop;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 41px;
+    padding-bottom: 20px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .title {
+    font-weight: $RobotoBlack;
+    color: $black-color;
+    font-size: 30px;
+    line-height: 1.2;
+
+    @media (min-width: $desktop) {
+      font-size: 36px;
+      line-height: 0.722;
+    }
+
+    & + a {
+      margin-top: 17px;
+
+      @media (min-width: $desktop) {
+        margin-top: 42px;
+      }
+    }
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding-left: 2px;
+    width: max-content;
+
+    &::before {
+      content: "";
+      margin-right: 32px;
+    }
+
+    & + a {
+      margin-top: 15px;
+
+      @media (min-width: $desktop) {
+        margin-top: 38px;
+      }
+    }
+
+    &:hover {
+      name {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .doc::before {
+    @mixin bg word.png;
+  }
+
+  .excel::before {
+    @mixin bg excel.png;
+  }
+
+  .pdf::before {
+    @mixin bg pdf.png;
+  }
+
+  description {
+    display: flex;
+    flex-direction: column;
+  }
+
+  name {
+    font-weight: $RobotoLight;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #1a6191;
+  }
+
+  size {
+    font-weight: $RobotoLight;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #898582;
+  }
+}

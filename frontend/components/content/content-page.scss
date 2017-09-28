@@ -1,0 +1,343 @@
+.content-page {
+  & > h1,
+  & > h2,
+  & > h3,
+  & > h4,
+  & > h5,
+  & > h6 {
+    font-weight: $RobotoBlack;
+    color: $black-color;
+    padding-left: 9px;
+    padding-right: 16px;
+
+    @media (min-width: $desktop) {
+      max-width: $desktop;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  & > h1 {
+    font-size: 30px;
+    line-height: 1.2;
+
+    @media (min-width: $tablet) {
+      padding-left: 14px;
+    }
+
+    @media (min-width: $desktop) {
+      font-size: 36px;
+      line-height: 0.722;
+    }
+
+    & + p {
+      margin-top: 12px;
+
+      @media (min-width: $desktop) {
+        margin-top: 25px;
+      }
+    }
+  }
+
+  & > * + h1 {
+    margin-top: 9px;
+
+    @media (min-width: $tablet) {
+      margin-top: 14px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-top: 75px;
+    }
+  }
+
+  & > h2 {
+    font-size: 27px;
+    line-height: 1.111;
+
+    @media (min-width: $tablet) {
+      padding-left: 14px;
+    }
+
+    @media (min-width: $desktop) {
+      font-size: 30px;
+      line-height: 0.867;
+    }
+
+    & + p {
+      margin-top: 15px;
+
+      @media (min-width: $desktop) {
+        margin-top: 23px;
+      }
+    }
+  }
+
+  & > * + h2 {
+    margin-top: 32px;
+
+    @media (min-width: $tablet) {
+      margin-top: 22px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-top: 60px;
+    }
+  }
+
+  & > h3 {
+    font-size: 24px;
+    line-height: 1.25;
+
+    @media (min-width: $tablet) {
+      padding-left: 14px;
+    }
+
+    @media (min-width: $desktop) {
+      font-size: 24px;
+      line-height: 1.083;
+    }
+
+    & + p {
+      margin-top: 11px;
+
+      @media (min-width: $desktop) {
+        margin-top: 21px;
+      }
+    }
+  }
+
+  & > * + h3 {
+    margin-top: 24px;
+
+    @media (min-width: $desktop) {
+      margin-top: 54px;
+    }
+  }
+
+  & > h4 {
+    font-size: 21px;
+    line-height: 1.143;
+
+    @media (min-width: $tablet) {
+      padding-left: 14px;
+    }
+
+    @media (min-width: $desktop) {
+      font-size: 21px;
+      line-height: 1.238;
+    }
+
+    & + p {
+      margin-top: 13px;
+
+      @media (min-width: $tablet) {
+        margin-top: 15px;
+      }
+
+      @media (min-width: $desktop) {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  & > * + h4 {
+    margin-top: 28px;
+
+    @media (min-width: $tablet) {
+      margin-top: 27px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-top: 54px;
+    }
+  }
+
+  & > h5 {
+    font-size: 18px;
+    line-height: 1.333;
+
+    @media (min-width: $tablet) {
+      padding-left: 14px;
+    }
+
+    @media (min-width: $desktop) {
+      font-size: 18px;
+      line-height: 1.167;
+    }
+
+    & + p {
+      margin-top: 12px;
+
+      @media (min-width: $desktop) {
+        margin-top: 22px;
+      }
+    }
+  }
+
+  & > * + h5 {
+    margin-top: 27px;
+
+    @media (min-width: $tablet) {
+      margin-top: 22px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-top: 43px;
+    }
+  }
+
+  & > h6 {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 1.6;
+
+    @media (min-width: $tablet) {
+      padding-left: 14px;
+    }
+
+    @media (min-width: $desktop) {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    & + p {
+      margin-top: 0px;
+    }
+  }
+
+  & > * + h6 {
+    margin-top: 28px;
+
+    @media (min-width: $tablet) {
+      margin-top: 20px;
+    }
+  }
+
+  & > p {
+    font-weight: $RobotoLight;
+    color: $black-color;
+    font-size: 14px;
+    line-height: 1.5;
+    padding-left: 10px;
+    padding-right: 12px;
+    hyphens: auto;
+
+    @media (min-width: $tablet) {
+      padding-left: 15px;
+    }
+
+    @media (min-width: $desktop) {
+      max-width: $desktop;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    a {
+      color: $blue-color;
+    }
+
+    & + p {
+      margin-top: 15px;
+
+      @media (min-width: $desktop) {
+        margin-top: 22px;
+      }
+    }
+  }
+
+  block-for-articles {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 14px;
+
+    @media (min-width: $tablet) {
+      padding-left: 12px;
+      padding-bottom: 10px;
+    }
+
+    @media (min-width: $desktop) {
+      padding-left: 0px;
+      padding-bottom: 30px;
+      justify-content: space-between;
+    }
+
+    .title {
+      line-height: 1.2;
+
+      & + .article-block {
+        margin-top: 20px;
+
+        @media (min-width: $desktop) {
+          margin-top: 43px;
+        }
+      }
+    }
+  }
+
+  .article-block {
+    padding-left: 2px;
+
+    @media (min-width: $desktop) {
+      padding-left: 0;
+      width: 488px;
+    }
+
+    & + .article-block {
+      margin-top: 30px;
+
+      @media (min-width: $tablet) {
+        margin-top: 24px;
+      }
+
+      @media (min-width: $desktop) {
+        margin-top: 61px;
+      }
+    }
+  }
+
+  .article-block:nth-child(2) + .article-block {
+    @media (min-width: $desktop) {
+      margin-top: 43px;
+    }
+  }
+
+  .article-block__title {
+    & + .article-block__desc {
+      margin-top: 10px;
+
+      @media (min-width: $desktop) {
+        margin-top: 22px;
+      }
+    }
+  }
+
+  .article-block__desc {
+    & + .article-block__button {
+      margin-top: 17px;
+
+      @media (min-width: $desktop) {
+        margin-top: 31px;
+      }
+    }
+  }
+
+  .article-block__button {
+    @media (min-width: $tablet) {
+      margin-left: 0;
+    }
+
+    @media (min-width: $desktop) {
+      align-self: flex-end;
+    }
+  }
+}
+
+

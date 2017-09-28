@@ -1,0 +1,105 @@
+block-with-img {
+  padding-top: 24px;
+  padding-bottom: 16px;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 23px;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 79px;
+    padding-bottom: 77px;
+  }
+
+  .text {
+    padding-left: 10px;
+    padding-right: 12px;
+
+    @media (min-width: $tablet) {
+      padding-left: 17px;
+      padding-right: 17px;
+    }
+
+    @media (min-width: $desktop) {
+      padding-left: 0;
+    }
+  }
+
+  .title {
+    font-size: 30px;
+    line-height: 0.867;
+    font-weight: $RobotoBlack;
+    color: $black-color;
+    width: 100%;
+
+    @media (min-width: $desktop) {
+      font-size: 36px;
+      line-height: 0.722;
+    }
+  }
+
+  .title + p {
+    margin-top: 15px;
+
+    @media (min-width: $tablet) {
+      margin-top: 13px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-top: 26px;
+    }
+  }
+
+  .text {
+    @media (min-width: $tablet) {
+      width: 50%;
+    }
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: $black-color;
+    font-weight: $RobotoLight;
+    hyphens: auto;
+
+    a {
+      color: $blue-color;
+    }
+  }
+
+  p + p {
+    margin-top: 21px;
+  }
+
+  .img {
+    text-align: center;
+    margin-top: 15px;
+
+    @media (min-width: $tablet) {
+      margin-top: 44px;
+      width: 50%;
+    }
+
+    @media (min-width: $desktop) {
+      margin-top: -1px;
+      width: 50%;
+      padding-left: 12px;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    max-height: 206px;
+
+    @media (min-width: $desktop) {
+      max-height: 332px;
+    }
+  }
+}
