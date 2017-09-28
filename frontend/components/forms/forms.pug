@@ -34,3 +34,26 @@ mixin form--buy-one-click()
         input(placeholder="+ 7 (___) ___-__-__")
     .forms_container__button
       a(href="#") заказать
+
+mixin feedback-form()
+  +b.DIV.feedback-form.forms_container
+    +e.title: p Форма обратной связи
+    +e.body 
+      +e.field.middle
+        label Ваше имя
+        input(placeholder="_")
+      +e.field.middle
+        label Ваш телефон
+        input(type="tel" placeholder="+ 7 (___) ___-__-__")
+      +e.field.max
+        label Ваш E-mail
+        input(type="e-mail" placeholder="_")
+      +e.field.middle
+        label Вариант из списка
+        input(placeholder="Частное лицо")
+      +e.field.textarea
+        label Ваше сообщение
+        textarea(name="comment", cols="30", rows="10")
+    +e.buttons
+      a(href="#").feedback-form__clear Очистить
+      input(type="submit").feedback-form__submit

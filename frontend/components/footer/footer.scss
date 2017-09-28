@@ -356,3 +356,8 @@ footer {
   }
 }
 
+.content-page footer {
+  @media (min-width: $desktop) {
+    margin-top: 71px;
+  }
+}
