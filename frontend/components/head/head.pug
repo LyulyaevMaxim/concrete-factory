@@ -12,7 +12,10 @@ mixin head(data)
     link(rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="styles/fonts/roboto300.woff2")
     link(rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="styles/fonts/roboto900.woff2")
     link(rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="styles/fonts/roboto500.woff2")
-    link(rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="styles/fonts/roboto100.woff2")    
+    link(rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="styles/fonts/roboto100.woff2") 
+
+    //- фоновые изображения   
+    link(rel="preload" as="image" crossorigin="anonymous" href="img/sprite.png")  
 
     //- favicon
     link(href="img/favicons/favicon.ico" rel="shortcut icon")
@@ -22,5 +25,10 @@ mixin head(data)
     link(rel="manifest", href="img/favicons/manifest.json")
     link(rel="mask-icon", href="img/favicons/safari-pinned-tab.svg", color="#5bbad5")
     meta(name="theme-color", content="#ffffff")
-    style.
-      body { opacity: 0; }
+
+    //- плагины
+    link(href="js/owl.carousel/owl.carousel.min.css" rel="stylesheet")
+    link(href="js/owl.carousel/owl.theme.default.min.css" rel="stylesheet")
+
+    //- основные стили
+    link(rel="stylesheet" href="styles/styles.css" as="style")
