@@ -8,8 +8,11 @@
 		<meta name="HandheldFriendly" content="true"/>
 		<meta name="format-detection" content="telephone=no"/>
 		<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-		<link rel="preload" as="font" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" crossorigin="crossorigin" id="RobotoFonts"/>
-		<script>document.getElementById('RobotoFonts').setAttribute('rel', 'stylesheet');</script>
+		<link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="styles/fonts/roboto400.woff2"/>
+		<link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="styles/fonts/roboto300.woff2"/>
+		<link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="styles/fonts/roboto900.woff2"/>
+		<link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="styles/fonts/roboto500.woff2"/>
+		<link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="styles/fonts/roboto100.woff2"/>
 		<link href="img/favicons/favicon.ico" rel="shortcut icon"/>
 		<link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png"/>
 		<link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png"/>
@@ -17,7 +20,9 @@
 		<link rel="manifest" href="img/favicons/manifest.json"/>
 		<link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#5bbad5"/>
 		<meta name="theme-color" content="#ffffff"/>
-		<style>body { opacity: 0;}</style>
+		<link href="js/owl.carousel/owl.carousel.min.css" rel="stylesheet"/>
+		<link href="js/owl.carousel/owl.theme.default.min.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="styles/styles.css" as="style"/>
 	</head>
 </html>
 <header>
@@ -97,7 +102,6 @@
 	<p>Производственная компания "Нагорный Бетонный Завод" занимается <a href="#">производством бетона</a>, бетонных растворов и цементно-песчаный смесей высочайшего качества.  <br>Так же мы осуществляем доставку бетона по Нижнему Новгороду и области в кратчайшие сроки. </p>
 	<h6>Заголовок шестого уровня</h6>
 	<p>Производственная компания "Нагорный Бетонный Завод" занимается <a href="#">производством бетона</a>, бетонных растворов и цементно-песчаный смесей высочайшего качества. <br>Так же мы осуществляем доставку бетона по Нижнему Новгороду и области в кратчайшие сроки. </p>
-	<div style="height: 943px;"></div>
 	<block-for-lists>
 		<div class="title">Оформление списков</div>
 		<div class="subtitle">Список с буллетами</div>
@@ -134,8 +138,6 @@
 			</li>
 		</ol>
 	</block-for-lists>
-	<link href="js/owl.carousel/owl.carousel.min.css" rel="stylesheet"/>
-	<link href="js/owl.carousel/owl.theme.default.min.css" rel="stylesheet"/>
 	<block-for-tables>
 		<div class="title">Оформление таблиц</div>
 		<table-container>
@@ -227,15 +229,30 @@
 						<p>327, 369</p>
 					</parameter>
 					<parameter label="Область использования">
-						<p>Отличается высокой прочностью и может выдерживать большие нагрузки, в связи с чем широко применяется в монолитном домостроении.</p>
+						<p>Отличается высокой прочностью и может выдерживать большие нагрузки, в связи с чем широко применяется в монолитном домостроении. </p>
 					</parameter>
 				</item>
 			</table-body>
 		</table-container>
 	</block-for-tables>
-	<script src="js/jquery/jquery.min.js"></script>
-	<script src="js/owl.carousel/owl.carousel.min.js"></script>
-	<div style="height: 453px;"></div>
+	<block-for-gallery>
+		<div class="title">Оформление галереи</div>
+		<div class="owl-carousel owl-theme owl-gallery-slider">
+			<div class="gallery-block"><img src="img/content/gallery--1.png" alt=""/></div>
+			<div class="gallery-block"><img src="img/content/gallery--2.png" alt=""/></div>
+			<div class="gallery-block"><img src="img/content/gallery--3.png" alt=""/></div>
+			<div class="gallery-block">
+				<picture>
+					<source media="(min-width: 1170px)" srcset="img/content/gallery--4.png"/>
+					<source media="(min-width: 768px)" srcset="img/content/gallery--4.png"/><img src="img/content/gallery--4.png" alt=""/>
+				</picture>
+			</div>
+			<div class="gallery-block"><img src="img/content/gallery--3.png" alt=""/></div>
+			<div class="gallery-block"><img src="img/content/gallery--2.png" alt=""/></div>
+			<div class="gallery-block"><img src="img/content/gallery--1.png" alt=""/></div>
+			<div class="gallery-block"><img src="img/content/gallery--4.png" alt=""/></div>
+		</div>
+	</block-for-gallery>
 	<block-for-articles>
 		<div class="title">Классы бетона и&nbsp;область их применения</div>
 		<div class="article-block">
@@ -368,6 +385,9 @@
 			</div>
 		</div>
 	</footer>
+	<script src="js/jquery/jquery.min.js"></script>
+	<script src="js/owl.carousel/owl.carousel.min.js"></script>
+	<script src="js/components/sliders/full-slider/full-slider.js"></script>
+	<script src="js/components/sliders/tables/table.js"></script>
+	<script src="js/components/sliders/gallery/gallery.js"></script>
 </body>
-<link rel="stylesheet" href="styles/styles.css" as="style" id="mainFileStyles">
-<script src="js/components/sliders/tables/table.js"></script>

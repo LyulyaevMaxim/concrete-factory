@@ -6,9 +6,20 @@ mixin head(data)
     meta(name="HandheldFriendly" content="true")
     meta(name="format-detection", content="telephone=no")
     meta(content="IE=edge" http-equiv="X-UA-Compatible")
-    link(rel="preload" as="font" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" crossorigin id="RobotoFonts")
-    script.
-      document.getElementById('RobotoFonts').setAttribute('rel', 'stylesheet');
+
+    //- шрифты
+    link(rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="styles/fonts/roboto400.woff2")
+    link(rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="styles/fonts/roboto300.woff2")
+    link(rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="styles/fonts/roboto900.woff2")
+    link(rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="styles/fonts/roboto500.woff2")
+    link(rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="styles/fonts/roboto100.woff2")
+    //- <link rel="preload" href="styles/fonts/roboto-v16-cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    //- <link rel="preload" href="styles/fonts/roboto-v16-cyrillic-regular.woff2" as="font" crossorigin>
+    //- link(rel="preload" as="font" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" crossorigin)
+    //- script.
+    //-   document.getElementById('RobotoFonts').setAttribute('rel', 'stylesheet');
+
+    //- favicon
     link(href="img/favicons/favicon.ico" rel="shortcut icon")
     link(rel="apple-touch-icon", sizes="180x180", href="img/favicons/apple-touch-icon.png")
     link(rel="icon", type="image/png", sizes="32x32", href="img/favicons/favicon-32x32.png")
@@ -16,5 +27,8 @@ mixin head(data)
     link(rel="manifest", href="img/favicons/manifest.json")
     link(rel="mask-icon", href="img/favicons/safari-pinned-tab.svg", color="#5bbad5")
     meta(name="theme-color", content="#ffffff")
-
-    //- link(rel="stylesheet", href=data.style_page)
+    //- плагины
+    link(href="js/owl.carousel/owl.carousel.min.css" rel="stylesheet")
+    link(href="js/owl.carousel/owl.theme.default.min.css" rel="stylesheet")
+    //- основные стили
+    link(rel="stylesheet" href="styles/styles.css" as="style")  

@@ -1,0 +1,23 @@
+mixin gallery()
+  block-for-gallery
+    .title Оформление галереи
+    .owl-carousel.owl-theme.owl-gallery-slider
+      .gallery-block
+        img(src="img/content/gallery--1.png" alt="")
+      .gallery-block
+        img(src="img/content/gallery--2.png" alt="")
+      .gallery-block
+        img(src="img/content/gallery--3.png" alt="")    
+      .gallery-block
+        picture
+          source(media="(min-width: 1170px)" srcset="img/content/gallery--4.png")
+          source(media="(min-width: 768px)" srcset="img/content/gallery--4.png")
+          img(src="img/content/gallery--4.png" alt="")
+      .gallery-block
+        img(src="img/content/gallery--3.png" alt="")   
+      .gallery-block
+        img(src="img/content/gallery--2.png" alt="")   
+      .gallery-block
+        img(src="img/content/gallery--1.png" alt="")
+      .gallery-block
+        img(src="img/content/gallery--4.png" alt="")

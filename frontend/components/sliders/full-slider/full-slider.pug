@@ -1,7 +1,4 @@
 mixin full-slider() 
-  link(href="js/owl.carousel/owl.carousel.min.css" rel="stylesheet")
-  link(href="js/owl.carousel/owl.theme.default.min.css" rel="stylesheet")
-
   slider.owl-carousel.owl-theme.owl-full-slider
     .owl-item
       .text
@@ -17,21 +14,4 @@ mixin full-slider()
         h2 Заголовок
         h3 Подзаголовок
         a(href="#") Подробнее
-      img(src="img/content/main-slide-1.jpg" alt="")
-  
-  script(src="js/jquery/jquery.min.js")
-  script(src="js/owl.carousel/owl.carousel.min.js")
-  script.
-    var owl = $('.owl-full-slider');
-    owl.owlCarousel({
-      margin: 0,
-      nav: true,
-      navText: true,
-      loop: true,
-      dots: false,
-      responsive: {
-        0: {
-          items: 1
-        }
-      }
-    })
+      img(src="img/content/main-slide-1.jpg" alt="")     

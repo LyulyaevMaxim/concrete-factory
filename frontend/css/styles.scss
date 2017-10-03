@@ -1,5 +1,6 @@
 @import "../components/postcss-reset/mobile.css";
 @import "helpers/_variables.scss";
+@import "helpers/_fonts.scss";
 @import "helpers/_base.scss";
 @import "helpers/_mixins.scss";
 @import "../components/header/header.scss";
@@ -8,6 +9,7 @@
 /**************BEGIN: СЛАЙДЕРЫ ************************/
 @import "../components/sliders/full-slider/full-slider.scss";
 @import "../components/sliders/tables/table.scss";
+@import "../components/sliders/gallery/gallery.scss";
 /***************END: СЛАЙДЕРЫ *****************/
 
 /**************BEGIN: ФОРМЫ ************************/
@@ -28,7 +30,8 @@
 @import "../components/content/text-with-img/text-with-img.scss";
 @import "../components/content/content-page.scss";
 /***************END: КОНТЕНТ  *****************/
-
-                  
-                                                                
+              
+                   
+                                                                       
                 
+            

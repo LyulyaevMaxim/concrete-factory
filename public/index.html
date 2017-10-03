@@ -8,8 +8,11 @@
 		<meta name="HandheldFriendly" content="true"/>
 		<meta name="format-detection" content="telephone=no"/>
 		<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-		<link rel="preload" as="font" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" crossorigin="crossorigin" id="RobotoFonts"/>
-		<script>document.getElementById('RobotoFonts').setAttribute('rel', 'stylesheet');</script>
+		<link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="styles/fonts/roboto400.woff2"/>
+		<link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="styles/fonts/roboto300.woff2"/>
+		<link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="styles/fonts/roboto900.woff2"/>
+		<link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="styles/fonts/roboto500.woff2"/>
+		<link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="styles/fonts/roboto100.woff2"/>
 		<link href="img/favicons/favicon.ico" rel="shortcut icon"/>
 		<link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png"/>
 		<link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png"/>
@@ -17,7 +20,9 @@
 		<link rel="manifest" href="img/favicons/manifest.json"/>
 		<link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#5bbad5"/>
 		<meta name="theme-color" content="#ffffff"/>
-		<style>body { opacity: 0;}</style>
+		<link href="js/owl.carousel/owl.carousel.min.css" rel="stylesheet"/>
+		<link href="js/owl.carousel/owl.theme.default.min.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="styles/styles.css" as="style"/>
 	</head>
 </html>
 <header>
@@ -82,8 +87,6 @@
 	</div>
 </header>
 <body class="main-page"> 
-	<link href="js/owl.carousel/owl.carousel.min.css" rel="stylesheet"/>
-	<link href="js/owl.carousel/owl.theme.default.min.css" rel="stylesheet"/>
 	<slider class="owl-carousel owl-theme owl-full-slider">
 		<div class="owl-item">
 			<div class="text">
@@ -102,23 +105,6 @@
 			</div><img src="img/content/main-slide-1.jpg" alt=""/>
 		</div>
 	</slider>
-	<script src="js/jquery/jquery.min.js"></script>
-	<script src="js/owl.carousel/owl.carousel.min.js"></script>
-	<script>
-		var owl = $('.owl-full-slider');
-		owl.owlCarousel({
-		  margin: 0,
-		  nav: true,
-		  navText: true,
-		  loop: true,
-		  dots: false,
-		  responsive: {
-		    0: {
-		      items: 1
-		    }
-		  }
-		})
-	</script>
 	<div class="calculation-cost__container" style="background: url(img/sprite/fon-white.jpg);">
 		<div class="calculation-cost forms_container">
 			<div class="calculation-cost__title">
@@ -358,5 +344,3 @@
 		</div>
 	</footer>
 </body>
-<link rel="preload" href="styles/styles.css" as="style" id="mainFileStyles">
-<script>document.getElementById('mainFileStyles').setAttribute('rel', 'stylesheet');</script>

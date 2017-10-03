@@ -4,6 +4,7 @@ include _assets/bemto/bemto
 include ../components/head/head
 include ../components/header/header
 include ../components/footer/footer
+include ../components/connect-js/scripts
 //- контент
 include ../components/content/block-with-img/block-with-img
 include ../components/content/content-with-img/content-with-img
@@ -19,18 +20,16 @@ include ../components/forms/buy-one-click/buy-one-click
 //- слайдеры
 include ../components/sliders/tables/table
 include ../components/sliders/full-slider/full-slider
+include ../components/sliders/gallery/gallery
+
 
 doctype html
 html(lang="ru")
   head
     +head({
       "title": "Главная",
-      "description": "Главная страница",
-      "style_page": "styles/index.css"
-    })
-    style body { opacity: 0;}
-    
-
+      "description": "Главная страница"
+    })  
 
 
 +header()
@@ -47,9 +46,7 @@ html(lang="ru")
   +block-for-advantages() 
   .block-for-news__container(style="background: url(img/sprite/fon-white.jpg);")
     +block-for-articles()
-  +footer()
-          
-
-link(rel="preload" href="styles/styles.css" as="style" id="mainFileStyles")
-script.
- document.getElementById('mainFileStyles').setAttribute('rel', 'stylesheet');
+  +footer()        
+//- link(rel="preload" href="styles/styles.css" as="style" id="mainFileStyles")
+//- script.
+//-  document.getElementById('mainFileStyles').setAttribute('rel', 'stylesheet');
