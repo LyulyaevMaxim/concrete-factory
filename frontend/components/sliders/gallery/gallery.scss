@@ -1,6 +1,7 @@
 block-for-gallery {
   padding-top: 20px;
   padding-bottom: 10px;
+  width: 100%;
 
   @media (min-width: $desktop) {
     max-width: $desktop;

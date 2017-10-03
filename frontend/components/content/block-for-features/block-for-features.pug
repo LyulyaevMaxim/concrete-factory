@@ -3,7 +3,7 @@ mixin block-for-features()
     .title Основные характеристики бетона
     +b.feature-block
       +e.title
-        +e.IMG(src="img/content/durability.svg" alt="").img
+        +e.IMG(data-src="img/content/durability.svg" alt="").img.lazyload
         +e.text Прочность
       +e.desc
         p.
@@ -11,7 +11,7 @@ mixin block-for-features()
 
     +b.feature-block
       +e.title
-        +e.IMG(src="img/content/uniformity.svg" alt="").img
+        +e.IMG(data-src="img/content/uniformity.svg" alt="").img.lazyload
         +e.text Однородность
       +e.desc
         p.
@@ -19,7 +19,7 @@ mixin block-for-features()
 
     +b.feature-block
       +e.title
-        +e.IMG(src="img/content/density.svg" alt="").img
+        +e.IMG(data-src="img/content/density.svg" alt="").img.lazyload
         +e.text Плотность
       +e.desc
         p.
