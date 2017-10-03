@@ -112,7 +112,8 @@
       width: 170px;
     }
 
-    & + input {
+    & + input,
+    & + .select {
       margin-top: 12px;
 
       @media (min-width: $tablet) {

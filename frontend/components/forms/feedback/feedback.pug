@@ -13,7 +13,12 @@ mixin feedback-form()
         input(type="e-mail" placeholder="_")
       +e.field.middle
         label Вариант из списка
-        input(placeholder="Частное лицо")
+        form(action="").select
+          label.label
+          select.turnintodropdown_demo2
+            option Частное лицо
+            option Не частное лицо
+            option Организация
       +e.field.textarea
         label Ваше сообщение
         textarea(name="comment", cols="30", rows="10")

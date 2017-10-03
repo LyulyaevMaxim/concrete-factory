@@ -5,13 +5,23 @@ mixin form--calculation-cost()
     +e.body
       +e.field.middle        
         label Тип бетона
-        input(placeholder="Бетон М-100 В 7.5, П3")
+        form(action="").select
+          label.label
+          select.turnintodropdown_demo2
+            option Бетон М-100 В 7.5, П3
+            option Бетон М-250
+            option Бетон М-300
       +e.field.min
         label Количество, м3
         input(placeholder="1")        
       +e.field.middle
         label Аренда б-насоса
-        input(placeholder="Не требуется")        
+        form(action="").select
+          label.label
+          select.turnintodropdown_demo2
+            option Не требуется
+            option Нужна на долгий срок
+            option Объясните зачем?        
       +e.field.min
         label Количество часов
         input(placeholder="5")        

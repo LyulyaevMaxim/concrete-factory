@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html >
 <html lang="ru">
 	<head>
 		<title>Главная</title>
@@ -114,7 +114,14 @@
 			<div class="calculation-cost__body">
 				<div class="calculation-cost__field middle">       
 					<label>Тип бетона</label>
-					<input placeholder="Бетон М-100 В 7.5, П3"/>
+					<form class="select" action="">
+						<label class="label"></label>
+						<select class="turnintodropdown_demo2">
+							<option>Бетон М-100 В 7.5, П3</option>
+							<option>Бетон М-250</option>
+							<option>Бетон М-300</option>
+						</select>
+					</form>
 				</div>
 				<div class="calculation-cost__field min">
 					<label>Количество, м3</label>
@@ -122,7 +129,14 @@
 				</div>
 				<div class="calculation-cost__field middle">
 					<label>Аренда б-насоса</label>
-					<input placeholder="Не требуется"/>
+					<form class="select" action="">
+						<label class="label"></label>
+						<select class="turnintodropdown_demo2">
+							<option>Не требуется</option>
+							<option>Нужна на долгий срок</option>
+							<option>Объясните зачем?        </option>
+						</select>
+					</form>
 				</div>
 				<div class="calculation-cost__field min">
 					<label>Количество часов</label>
@@ -350,4 +364,5 @@
 	<script src="js/components/sliders/full-slider/full-slider.js" async="async"></script>
 	<script src="js/components/sliders/gallery/gallery.js" async="async"></script>
 	<script src="js/components/sliders/tables/table.js" async="async"></script>
+	<script src="js/components/select/select.js" async="async"></script>
 </body>
