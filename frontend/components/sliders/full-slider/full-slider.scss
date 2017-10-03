@@ -1,6 +1,11 @@
 slider.owl-full-slider {
   overflow-x: hidden;
   margin-top: -1px;
+  display: flex;
+
+  @media (min-width: $desktop) {
+    height: 548px;
+  }
 
   h2 {
     font-size: 24px;
@@ -66,6 +71,12 @@ slider.owl-full-slider {
     }
   }
 
+  picture,
+  .owl-carousel .owl-item img {
+    width: 100%;
+    display: flex;
+  }
+
   .text {
     position: absolute;
     z-index: 1;
@@ -107,6 +118,14 @@ slider.owl-full-slider {
     &.active {
       z-index: 1;
     }
+
+    &:nth-child(n + 2) {
+      display: none;
+    }
+  }
+
+  &.owl-loaded  .owl-item:nth-child(n + 2) {
+    display: block;
   }
 
   .owl-nav {
