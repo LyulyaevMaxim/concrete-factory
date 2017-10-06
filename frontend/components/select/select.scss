@@ -39,7 +39,6 @@
 
     & ~ .select--body {
       display: block;
-      // margin-bottom: 30px;
     }
 
     &::after {
@@ -55,8 +54,8 @@
 
   ul {
     height: auto;
-    max-height: 250px;
-    overflow-y: scroll;
+    max-height: 280px;
+    overflow-y: auto;
     border: 1px solid #e7e7e7;
     border-radius: 10px;
     border-top: none;

@@ -1,4 +1,5 @@
 .buy-one-click__container {
+  display: block;
   padding-top: 20px;
   padding-bottom: 18px;
 
@@ -19,6 +20,13 @@
       display: flex;
       flex-wrap: wrap;
     }
+
+    & > form {
+      @media (min-width: $desktop) {
+        width: 100%;
+        display: flex;
+      }
+    }
   }
 
   .forms_container__button {
@@ -30,8 +38,10 @@
       margin-left: 17%;
       text-align: left;
 
-      a {
+      a,
+      input {
         width: 224px;
+        min-width: 224px;
       }
     }
 

@@ -9,7 +9,6 @@
       navText: true,
       loop: true,
       dots: false,
-      lazyLoad: true,
       responsive: {
         0: {
           items: 1

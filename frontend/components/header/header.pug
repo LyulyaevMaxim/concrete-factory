@@ -19,8 +19,7 @@ mixin header()
           +e.FORM(action="/search" method="get").form
             input(type="checkbox")#showSearchForm
             label(for="showSearchForm")
-            input(type="search" placeholder="Поиск" autocomplete="off")
-            span#fast-search-loader Загрузка результатов...   
+            input(type="search" placeholder="Поиск" autocomplete="off") 
             input(type="submit")
             .ornamental-line                  
         +b.header-menu

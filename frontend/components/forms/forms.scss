@@ -37,7 +37,8 @@
 }
 
 .forms_container__button {
-  a {
+  a,
+  input {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -49,6 +50,8 @@
     border-radius: 60px;
     padding: 0px 54px;
     text-transform: uppercase;
+    border: 1px solid $blue-color;
+    cursor: pointer;
   }
 
   &::before {

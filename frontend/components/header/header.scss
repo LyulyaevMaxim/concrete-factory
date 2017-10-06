@@ -203,10 +203,27 @@ header {
           @media (min-width: $tablet) {
             background: $white-color;
             margin-right: 0;
+            position: relative;
           }
 
           @media (min-width: $desktop) {
             margin-right: 8px;
+          }
+        }
+
+        .msg-wrap {
+          width: 100%;
+          text-align: center;
+          color: #1a6191;
+
+          @media (max-width: 767px) {
+            display: none !important;
+          }
+
+          @media (min-width: $tablet) {
+            position: absolute;
+            left: 0;
+            top: 50px;
           }
         }
 
@@ -503,6 +520,10 @@ header {
       @media (min-width: $desktop) {
         margin-right: 13px;
         cursor: pointer;
+
+        &:last-child {
+          margin-right: 0;
+        }
       }
 
       &:hover {
@@ -639,7 +660,7 @@ header {
         padding-top: 4px;
         left: -4px;
         min-width: max-content;
-        margin-top: 52px;
+        margin-top: 50px;
       }
 
       li {

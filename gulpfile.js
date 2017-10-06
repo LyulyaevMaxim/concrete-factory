@@ -134,11 +134,11 @@ gulp.task('сss-optim', function () {
     .pipe(gulp.dest('public'));
 });
 
-gulp.task('clean', function () {
-  return del('public/img/sprite');
-});
+// gulp.task('clean', function () {
+//   return del('public/img/sprite');
+// });
 
-gulp.task('build', gulp.parallel('js-optim', 'сss-optim', 'clean'));
+gulp.task('build', gulp.parallel('js-optim', 'сss-optim'));
 /*---------------------END: Build--------------------------*/
 
 
